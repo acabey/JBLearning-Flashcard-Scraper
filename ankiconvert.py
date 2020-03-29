@@ -5,6 +5,9 @@ from pathlib import Path
 
 MODEL_ID = 1260270622
 
+DECK_PREFIX = '' # TODO Replace with your deck prefix (ie. Biochemistry::)
+PACKAGE_NAME = '' # TODO Replace with your package name (ie. Biochemistry 2102)
+
 my_model = genanki.Model(
     MODEL_ID,
     'Simple Model',
@@ -37,14 +40,14 @@ def main():
             my_decks.append(create_chapter_deck(chapter_title, csv_reader))
 
     if my_decks:
-        genanki.Package(my_decks).write_to_file('AEMT.apkg')
+        genanki.Package(my_decks).write_to_file(f'{PACKAGE_NAME}.apkg')
 
 
 def create_chapter_deck(chapter, chapter_rows):
 
     my_deck = genanki.Deck(
         random.randrange(1 << 30, 1 << 31),
-        f'JBLearning AEMT::{chapter}')
+        f'{DECK_PREFIX}::{chapter}')
 
     first = True
     for row in chapter_rows:
@@ -61,6 +64,7 @@ def create_chapter_deck(chapter, chapter_rows):
         my_deck.add_note(my_note)
 
     return my_deck
+
 
 if __name__ == '__main__':
     main()

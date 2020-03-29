@@ -15,10 +15,12 @@ cookies = {
     'ASP.NET_SessionId': ''
 }
 
+course_block_url = 'http://navigate2.jblearning.com/course/view.php?id=51018'
+
+
 def main():
 
     jbl_base_url = 'http://navigate2.jblearning.com'
-    course_block_url = 'http://navigate2.jblearning.com/course/view.php?id=51018'
 
     options = Options()
     options.headless = True
