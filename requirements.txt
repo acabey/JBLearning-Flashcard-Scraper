@@ -1,0 +1,13 @@
+beautifulsoup4==4.8.2
+cached-property==1.5.1
+certifi==2019.11.28
+chardet==3.0.4
+frozendict==1.2
+genanki==0.8.0
+idna==2.9
+pystache==0.5.4
+PyYAML==5.3.1
+requests==2.23.0
+selenium==3.141.0
+soupsieve==2.0
+urllib3==1.25.8
